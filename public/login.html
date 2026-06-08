@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول - مدرسة علمني</title>
+  </head>
+
+  <body class="auth-page">
+    <main class="container py-5">
+      <section class="auth-box mx-auto bg-white p-4 rounded border">
+        <h1 class="h3 text-center mb-4">تسجيل الدخول</h1>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">البريد الإلكتروني</label>
+            <input
+              type="email"
+              id="loginEmail"
+              class="form-control"
+              placeholder="example@email.com"
+              dir="ltr"
+            />
+            <div class="error-message text-danger small mt-1"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">كلمة المرور</label>
+            <input
+              type="password"
+              id="loginPassword"
+              class="form-control"
+              placeholder="أدخل كلمة المرور"
+            />
+            <div class="error-message text-danger small mt-1"></div>
+          </div>
+
+          <button type="submit" class="btn btn-warning w-100 mb-3">
+            تسجيل الدخول
+          </button>
+
+          <p class="text-center mb-2">
+            <a href="#" class="text-muted"> هل نسيت كلمة المرور؟ </a>
+          </p>
+
+          <p class="text-center mb-0">
+            لا تملك حساباً؟
+            <a href="register.html" class="text-warning fw-bold">
+              إنشاء حساب جديد
+            </a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
