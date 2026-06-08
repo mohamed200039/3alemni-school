@@ -1,0 +1,49 @@
+@mixin student-theme($bg-color, $main-color, $text-color) {
+  background-color: $bg-color;
+  min-height: 100vh;
+
+  .student-header {
+    background-color: $main-color;
+    color: $text-color;
+  }
+
+  .student-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+  }
+
+  .tips-section {
+    background-color: white;
+    border-right: 5px solid $main-color;
+  }
+
+  .student-btn {
+    background-color: $main-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 24px;
+
+    &:hover {
+      opacity: 0.85;
+      color: $text-color;
+    }
+  }
+
+  table {
+    th {
+      background-color: $main-color;
+      color: $text-color;
+    }
+  }
+}
+
+.student-one {
+  @include student-theme(#fff8e1, #ffc107, #3d2f00);
+}
+
+.student-two {
+  @include student-theme(#eef7ff, #0d6efd, white);
+}
