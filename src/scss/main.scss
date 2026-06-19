@@ -1,10 +1,11 @@
 @use "./students";
+@use "./variables" as *;
 @use "./auth";
 
 body {
   font-family: Arial, sans-serif;
   direction: rtl;
-  background-color: #f8f9fa;
+  background-color: $body-bg;
 }
 
 img {

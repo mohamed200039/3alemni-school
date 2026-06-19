@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin student-theme($bg-color, $main-color, $text-color) {
   background-color: $bg-color;
   min-height: 100vh;
@@ -16,7 +18,7 @@
   }
 
   .tips-section {
-    background-color: white;
+    background-color: $school-white;
     border-right: 5px solid $main-color;
   }
 
@@ -41,9 +43,9 @@
 }
 
 .student-one {
-  @include student-theme(#fff8e1, #ffc107, #3d2f00);
+  @include student-theme($student-one-bg, $student-one-main, $student-one-text);
 }
 
 .student-two {
-  @include student-theme(#eef7ff, #0d6efd, white);
+  @include student-theme($student-two-bg, $student-two-main, white);
 }
