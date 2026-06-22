@@ -1,6 +1,10 @@
 مشروع مدرسة علمني
-تم بإستعمال الادوات التالية :
-HTML , SASS , BOOTSTRAP , WEBPACK , JQUERY , JAVASCRIPT .
+
+رابط معاينة المشروع:
+https://mohamed200039.github.io/3alemni-school/
+
+تم إنشاء المشروع باستعمال الأدوات التالية:
+HTML، Sass، Bootstrap، Webpack، jQuery، JavaScript.
 
 وصف المشروع
 
@@ -14,7 +18,6 @@ student-one.html: صفحة الطالب المتفوق الأول.
 student-two.html: صفحة الطالب المتفوق الثاني.
 login.html: صفحة تسجيل الدخول.
 register.html: صفحة إنشاء حساب جديد.
-
 طريقة تشغيل المشروع محليًا
 
 أولًا، ثبّت الحزم:
@@ -38,3 +41,5 @@ npm run build
 
 dist/
 ضغط الصور
+
+تم استخدام إعدادات Webpack من أجل ضغط الصور أثناء عملية بناء نسخة الإنتاج
