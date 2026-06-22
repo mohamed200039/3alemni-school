@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -30,6 +31,26 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+    ],
+  },
+
+  optimization: {
+    minimizer: [
+      "...",
+      new ImageMinimizerPlugin({
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ["imagemin-mozjpeg", { quality: 75 }],
+              ["imagemin-pngquant", { quality: [0.65, 0.8] }],
+              ["imagemin-gifsicle", { interlaced: true }],
+              ["imagemin-svgo", {}],
+            ],
+          },
+        },
+      }),
     ],
   },
 
